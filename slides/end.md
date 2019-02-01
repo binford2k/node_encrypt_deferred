@@ -10,7 +10,7 @@
 * @binford2k:
 [ [fab-twitter] ](https://www.twitter.com/binford2k)
 [ [fab-github] ](https://www.github.com/binford2k)
-[ [fab-slack] ](https://puppetcommunity.slack.com/team/UF463AVQS)
+[ [fab-slack] ](https://puppetcommunity.slack.com/team/U11HA7VJ7)
 
 ~~~SECTION:notes~~~
 
