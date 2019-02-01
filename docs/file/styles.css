@@ -1,0 +1,90 @@
+.callout:before {
+  color: #ffad1a;
+}
+
+.callout.cheers,
+.callout.heart,
+.callout.lightbulb,
+.callout.meh,
+.callout.grin {
+  padding-left: 3.5em;
+}
+
+.callout.cheers:before {
+  content: "\f79f";
+}
+.callout.heart:before {
+  content: "\f004";
+}
+.callout.lightbulb:before {
+  content: "\f0eb";
+}
+.callout.meh:before {
+  content: "\f11a";
+}
+.callout.grin:before {
+  content: "\f58a";
+}
+
+a {
+  text-decoration: none;
+}
+
+.slide.currentSlide:after {
+  font-family: "Font Awesome 5 Brands";
+  content: "@binford2k: \f099  \f09b  \f198";
+  position: absolute;
+  bottom: 1px;
+  left: 3px;
+}
+.slide.currentSlide.nofooter:after {
+  content: none;
+}
+
+/* Allow us to specify when we want code to wrap */
+.content pre.code_wrap:not(.highlight),
+.content pre.highlight code.code_wrap  {
+    white-space: pre-wrap; /* css-3 */S
+    white-space: -moz-pre-wrap !important; /* Mozilla, since 1999 */
+    white-space: -pre-wrap; /* Opera 4-6 */
+    white-space: -o-pre-wrap; /* Opera 7 */
+    word-wrap: break-word; /* Internet Explorer 5.5+ */
+}
+
+.content .float_left  {
+  float: left;
+  margin-right: 1em;
+}
+.content .float_right {
+  float: right;
+  margin-left: 1em;
+}
+
+.content.sidebar > ul {
+  margin-left: 250px;
+}
+
+.content.invert {
+  color: white;
+}
+
+.content.invert h1,
+.content.invert h2 {
+  font-weight: 900;
+  background-color: #ffad1a;
+  margin: -1px;
+  line-height: 2em;
+  border: none !important;
+}
+
+.callout.fixed {
+  border-color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 16em;
+  width: 85%;
+}
+
+.execute:after {
+  font-family: "Font Awesome 5 Free";
+}
