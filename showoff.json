@@ -1,0 +1,41 @@
+{
+  "name": "Agent-side functions in Puppet 6. Wait, that's a thing?",
+  "sections": [
+    "slides/title.md",
+    "slides/introduction.md",
+    "slides/overview.md",
+
+    "slides/puppetconf_2015.md",
+    "slides/secrets.md",
+    "slides/example_plain.md",
+    "slides/argument.md",
+    "slides/just_build_it.md",
+
+    "slides/architecture.md",
+    "slides/example_resource.md",
+    "slides/provider_per.md",
+    "slides/node_encrypt.md",
+    "slides/defined_type.md",
+    "slides/example_node_encrypt.md",
+
+    "slides/agent_side_functions.md",
+    "slides/deferred_type.md",
+    "slides/two_important_points.md",
+    "slides/puppet4_functions.md",
+    "slides/example_node_deferred.md",
+    "slides/secret_wrapper_function.md",
+    "slides/example_secret.md",
+
+    "slides/suitability.md",
+    "slides/represent_state.md",
+    "slides/known_unknown.md",
+    "slides/use_cases.md",
+    "slides/label_examples.md",
+    "slides/immutable_configuration.md",
+
+    "slides/summary.md",
+    "slides/more_info.md",
+    "slides/contributor_summit.md",
+    "slides/end.md"
+  ]
+}
