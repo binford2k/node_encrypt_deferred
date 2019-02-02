@@ -1,5 +1,5 @@
 /stats/
-
+.rake_t_cache
 *.gem
 *.rbc
 /.config
