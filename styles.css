@@ -80,11 +80,39 @@ a {
 .callout.fixed {
   border-color: white;
   background-color: rgba(0, 0, 0, 0.5);
-  position: fixed;
+  position: absolute;
   top: 16em;
   width: 85%;
 }
 
-.execute:after {
-  font-family: "Font Awesome 5 Free";
+@media print {
+   #preso, .slide {
+    overflow: hidden;
+  }
+
+   #preso, .slide:not(.cover) {
+    max-height: inherit !important;
+    height: 100% !important; /* because otherwise handout notes are cutoff by the inline height set on the slide */
+    overflow: hidden;
+  }
+  .slide .center:not(.cover),
+  #slides.supplemental .slide .center {
+    position: static;
+    /* for some reason, setting top to 50% is pushing the content too far down, no idea why */
+    top: inherit;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+  }
+
+  .slide.center.fullscreen {
+    height: 800px !important;
+  }
+  .slide .center.fullscreen + .notes-section {
+    position: relative;
+    top: 300px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
 }

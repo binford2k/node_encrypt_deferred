@@ -4,23 +4,42 @@
     @@@ Json
     {
       "type": "File",
-      "title": "/etc/puppetlabs/mcollective/server.cfg",
-    [...]
+      "title": "/etc/payroll/credentials.conf",
+      "tags": [ "file", "node", "default", "class" ],
+      "file": "/etc/puppetlabs/code/environments/production/manifests/site.pp",
+      "line": 32,
+      "exported": false,
       "parameters": {
-        "content": "plugin.activemq.pool.1.password = TekjzYZubjJG3WgSOkq4...",
+        "ensure": "file",
         "owner": "root",
-        "group": "wheel",
-        "mode": "0660",
-        "notify": "Service[mcollective]",
+        "group": "root",
+        "mode": "0600",
+        "content": "some fake secret for cfgmgmtcamp",
         "backup": false
-      },
-      "sensitive_parameters": ["content"]
+      }
     },
-    
+
 .break
 
-* For each resource
-    * Puppet chooses the best provider for that type
-    * Invokes the provider with the data you see here
-    
+* Puppet iterates the catalong and invokes each provider with this data
+
 .callout.warning Which means that *only a provider* can run code to decrypt the ciphertext
+
+~~~SECTION:notes~~~
+
+* Let's look again at that resource in the catalog.
+* This time I'll show you the complete definition with all the properties.
+* This is a resource of type File with a title and other parameters.
+* You can see all the parameters, like I showed you before.
+* The agent simply iterates through the catalog and invokes the proper provider for each resource
+    * with only the data you see here.
+* Which means that *only a provider* can run code to tranform the content and decrypt ciphertext
+
+Use `jq` to extract this data from the catalog:
+
+    @@@ shell code_wrap
+    jq '.resources[] | select(.type == "File" and .title == "/etc/payroll/credentials.conf")' \
+    /opt/puppetlabs/puppet/cache/client_data/catalog/agent.json
+
+
+~~~ENDSECTION~~~

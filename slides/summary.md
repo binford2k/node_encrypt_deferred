@@ -3,10 +3,10 @@
 
 ![.float_right Puppet 6](/_images/puppet6.png)
 
-* Agent side functions are totally a thing now.
+* Agent side functions are totally a thing now for specific kinds of use cases.
 * Any Puppet 4.x function can be deferred
     * Resolve a value
-    * Has no side effects
+    * Generally avoid side effects
 * Use deferred functions as placeholders for late-resolved values
-* Should focus on providing intent 
+* Should focus on providing intent
 

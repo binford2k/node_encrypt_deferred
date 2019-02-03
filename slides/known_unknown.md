@@ -18,13 +18,14 @@ they can provide (when they're not broken),
 ~~~SECTION:notes~~~
 
 * But the computing world has a long history of using the known unknowns--like variables.
-* Facts are resolved early in the compilation, so we can just use their values.
+* Facter facts are such variables, but they are resolved early in the compilation
+    * So we can just use their values and make the catalog itself declarative.
 * We only put late bound variables in the catalog when being resolved at runtime is preferable.
-* I like to think of these late-bound variables as ***labels***, because they're just a named placeholder for data
+* I like to think of these late-bound variables as ***labels***, because they're really just a named placeholder for data
 * And importantly, the name describes ***what they are***, which is often more important than what their value is
 * for example, that `mongodb.example.com` address is actually more specific than if we put the IP address
     * because when we update DNS, all the hosts talking to it just use that new address.
-    * so the domain name has specific meaning as *"whatever address this currently resolves to"* instead
-      of just an IP address that was correct at some point in time.
+    * so the domain name has specific meaning as *"whatever address this currently resolves to"*
+    * instead of just some IP that was correct at some point in time.
 
 ~~~ENDSECTION~~~

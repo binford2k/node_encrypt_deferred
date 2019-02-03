@@ -15,8 +15,8 @@ Direct links:
 
 ~~~SECTION:notes~~~
 
-* It's under this section because we see this as the main use case for this.
+* It's organized this way because we see this as the main use case for deferred functions.
 * I'm sure we'll start to see more use cases--I came up with a few here--and
   we'll expand the docs as that happens.
-  
+
 ~~~ENDSECTION~~~

@@ -6,14 +6,15 @@
 
 ~~~SECTION:notes~~~
 
-* No surprise, in that loaded environment, I ended up debating secrets
-* The question was whether Puppet's existing CA and distribution mechanisms were
-  more-or-less sufficient for basic secret management.
-* I thought that the agent could encrypt text using its certificate and the agent
-  could then decrypt it using its own certificate
+* No surprise, in that loaded environment, I ended up in a little friendly
+  conversation about secret management
+* The question at hand was whether Puppet's existing CA and distribution mechanisms
+  were more-or-less sufficient for basic secret management.
+* I thought that given the existing certificates, the master could encrypt text
+  using its certificate and the agent could then decrypt it using its own
 * It would use the built in Puppet CA and meant that each agent could only decrypt
   its own secrets
-* Sure there were challenges, but I knew it would work conceptually.
+* Sure there were challenges, but I knew conceptually that it would work.
 * But as often happens with strongly opinionated folk, neither of us changed position much.
 
 ~~~ENDSECTION~~~

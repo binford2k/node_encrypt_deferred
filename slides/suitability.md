@@ -11,10 +11,10 @@
   a fancy shell script engine
 * This is when we come back to the other point I mentioned earlier.
 * The only functions it makes sense to defer are those which return a value.
-* This framework does not allow you to defer logic
+    * This framework does not allow you to defer logic
 * You cannot make decisions based on an agent side function
 * All it allows you to do is resolve a value as the catalog is enforced.
-* That's it; **resolve a value**.
+    * That's it; **resolve a value**.
 * And there's reason for this.
 
 ~~~ENDSECTION~~~

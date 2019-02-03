@@ -22,10 +22,18 @@
       dispatch :decrypt do
         param 'String', :content
       end
-    
+
       def decrypt(content)
         Puppet::Pops::Types::PSensitiveType::Sensitive.new(
           Puppet_X::Binford2k::NodeEncrypt.decrypt(content)
         )
       end
     end
+
+~~~SECTION:notes~~~
+
+* I just needed to put the code needed to decrypt a secret into a Puppet 4.x
+  function that ***returns a value***.
+* And.... and well, that's it.
+
+~~~ENDSECTION~~~

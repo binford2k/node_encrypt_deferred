@@ -11,6 +11,7 @@ function on the agent during enforcement...
 
 * Sure enough, almost immediately someone wanted to encrypt a user password on Windows
 * And then someone else wanted to use concat with a secret
-* And I couldn't support either, without writing custom providers for each. 
+* And I couldn't support either, without writing custom providers for each.
+* Clearly I needed something more general.
 
 ~~~ENDSECTION~~~

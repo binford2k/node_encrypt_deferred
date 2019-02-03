@@ -14,8 +14,8 @@ Some implementation details that will matter:
 
 ~~~SECTION:notes~~~
 
-* This sounds like I'm talking about breakfast cereals here
-* But these are important points for keeping your code manageable long term.
+* I know this warning sounds like I'm talking about breakfast cereals and part of a complete breakfast here
+* But these are important points for keeping your code and your infrastructure manageable long term.
 * I spend a lot of time in Slack rescuing people from bad decisions.
 * Selfishly, I don't want you to be one of them.
 

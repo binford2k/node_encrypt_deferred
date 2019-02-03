@@ -5,7 +5,9 @@
 
 ~~~SECTION:notes~~~
 
-* Down in the bottom of that weird hotel, talking to people
+* So let's set the stage for my story.
+* The first act happens in Puppetconf 2014 in San Francisco.
+* Down in the bottom of that weird hotel, talking to people, vendors, users, etc.
 * I noticed a recurring theme throughout the whole event
 * Secrets, secrets, SECRETS!
 * Everyone wanted to talk secret management

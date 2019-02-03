@@ -7,6 +7,6 @@
 ~~~SECTION:notes~~~
 
 * There were some 50 type in core Puppet at the time
-* And that's not even including modules, like concat or mysql
+* And that's not even including modules on the Forge, like concat or mysql
 
 ~~~ENDSECTION~~~

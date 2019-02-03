@@ -9,7 +9,7 @@ Building a template on the agent:
       'password' => Deferred('vault_lookup::lookup',
                       ["secret/test", 'https://vault.docker:8200']),
     }
-    
+
     # compile the template source into the catalog
     file { '/etc/secrets.conf':
       ensure  => file,
@@ -22,12 +22,14 @@ for those using scope variables or interacting with the catalog.
 
 ~~~SECTION:notes~~~
 
-* Secret value is resolved on agent
-* Template is rendered on agent
+* And Puppet 6 now provides that as Deferred functions
+* Here I'm using a template with a secret resolved agent side by calling out to Vault
 * Declare an instance of the `Deferred` data type
-* Give it the name of the function you want to call and an array of arguments
-* Use **`inline_template()`** and **`file()`** to include template source in catalog
-* You can defer most Puppet 4.x functions
-* Note: only `.epp` style templates can be deferred due to how ERB uses scope.
+    * Give it the name of the function you want to call and an array of arguments
+* Because I don't know the secret until it's resolved, I have to delay template rendering to the agent side too
+    * We compile the template source into the catalog
+    * Use a Deferred call to **`inline_epp()`** to render it after the secret is resolved.
+* You can defer nearly all Puppet 4.x functions this way
+* Side note: `.erb` templates cannot be deferred like this due to how they use scope.
 
 ~~~ENDSECTION~~~
